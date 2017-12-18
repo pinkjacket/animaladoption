@@ -33,10 +33,10 @@ $(document).ready(function(){
   }
 
   $("#petBar").last().click(function(){
-    $(".info").empty();
+    //$(".info").empty();
     $(".info").append($("#petBar").last().name)
   });
-  
+
   // Adoption status toggle.
   //ONLY FUNCTIONAL FOR SINGLE ANIMAL, NEEDS TO BE APPLICABLE TO ANY ANIMAL 'CLICKED' ON.
   $("#edit-adoption-status").click(function() {
