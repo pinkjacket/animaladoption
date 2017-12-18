@@ -78,9 +78,9 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
       $("#petBar").find("#" + this.id).addClass("border");
       $("#picture").empty();
       $("#name").text(petList[selectPet - 1].name);
-      $("#breed").text(petList[selectPet - 1].breed);
+      $("#breed").text(petList[selectPet - 1].breed.join(": "));
       $("#age").text(petList[selectPet - 1].age);
-      $("#color").text(petList[selectPet - 1].color);
+      $("#color").text(petList[selectPet - 1].color.join(", "));
       $("#sex").text(petList[selectPet - 1].sex);
       $("#personality").text(petList[selectPet - 1].personality);
       $("#adoptionStatus").text(petList[selectPet - 1].adoptionStatus);
