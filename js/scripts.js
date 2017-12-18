@@ -37,6 +37,9 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
 
   $(".pets").click(function() {
     selectPet = this.id;
+    console.log(this);
+    $("#pets li").removeClass("border");
+    $("#petBar").find("#" + this.id).addClass("border");
     $("#picture").empty();
     $("#name").text(petList[selectPet - 1].name);
     $("#breed").text(petList[selectPet - 1].breed);
