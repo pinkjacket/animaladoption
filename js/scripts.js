@@ -10,6 +10,16 @@ function Pet(name, breed, age, color, sex, personality, picture) {
   this.adoptionStatus = false;
 }
 
+Pet.prototype.adoptionUpdate = function () {
+  if (this.adoptionStatus === true) {
+    this.adoptionStatus = false;
+  } else if (this.adoptionStatus === false) {
+    this.adoptionStatus = true;
+  } else {
+    return "Error! You broke the internet! (and the adoption status was NOT updated)"
+  }
+};
+
 
 
 /*FRONT END LOGIC*/
