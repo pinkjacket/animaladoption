@@ -14,8 +14,8 @@
       <div class = "col-md-4" id="petBar">
         <div>
           <h2>PETS</h2>
-          <ul class = "pets">
-            <li>...</li>
+          <ul id="pets">
+
           </ul>
         </div>
       </div>
@@ -23,20 +23,23 @@
       <div class = "col-md-8" id="infoBox">
         <div class="row">
           <div class="buttons">
-            <p>Adopted</p>
-            <p>Not adopted</p>
+            <select class="adoptFilter">
+              <option value="all">Show All</option>
+              <option value="notAdopted">Show Available</option>
+              <option value="adopted">Show Adopted</option>
+            </select>
           </div>
         </div>
         <div class="info">
           <h2>INFORMATION</h2>
           <ul>
             <li>name: <span id="name"></span></li>
-            <li>breed: <span id="breed"></span> </li>
+            <li>breed: <span id="breed"></span></li>
             <li>age: <span id="age"></span></li>
             <li>color: <span id="color"></span></li>
             <li>sex: <span id="sex"></span></li>
             <li>personality: <span id="personality"></span></li>
-            <li>adoption status: <span id="status"></span></li>
+            <li>adoption status: <span id="adoptionStatus"></span></li>
           </ul>
           <div class="buttons">
             <button type="button" name="button" id="edit-adoption-status">EDIT ADOPTION STATUS </button>
