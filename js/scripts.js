@@ -41,9 +41,9 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
     $("#petBar").find("#" + this.id).addClass("border");
     $("#picture").empty();
     $("#name").text(petList[selectPet - 1].name);
-    $("#breed").text(petList[selectPet - 1].breed);
+    $("#breed").text(petList[selectPet - 1].breed.join(": "));
     $("#age").text(petList[selectPet - 1].age);
-    $("#color").text(petList[selectPet - 1].color);
+    $("#color").text(petList[selectPet - 1].color.join(", "));
     $("#sex").text(petList[selectPet - 1].sex);
     $("#personality").text(petList[selectPet - 1].personality);
     $("#adoptionStatus").text(petList[selectPet - 1].adoptionStatus);
@@ -70,7 +70,7 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
     var personality = $("input#new-personality").val();
     var picture = $("input#new-picture").val().replace("C:\\fakepath\\", "<img src=img/") + ">";
     var newPet = new Pet(name, breed, age, color, sex, personality, picture);
-    $("#pets").append("<li class='pets' id=" + petList[i].id + ">" + petList[i].picture + "</li>")
+    $("#pets").append("<li class='pets' id=" + petList[petList.length - 1].id + ">" + petList[petList.length - 1].picture + "</li>")
     $("#new-pet-form").hide();
     $(".pets").click(function() {
       selectPet = this.id;
