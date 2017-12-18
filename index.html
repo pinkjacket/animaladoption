@@ -36,7 +36,6 @@
             <li>color: <span id="color"></span></li>
             <li>sex: <span id="sex"></span></li>
             <li>personality: <span id="personality"></span></li>
-            <li>picture: <span id="picture"></span></li>
             <li>adoption status: <span id="adoptionStatus"></span></li>
           </ul>
           <div class="buttons">
@@ -45,7 +44,38 @@
         </div>
       </div>
     </div>
-
+    <button type="button" name="new-pet" id="new-pet">Add new pet</button>
+    <form id="new-pet-form">
+      <div class="form-group">
+        <label for="name">Pet name</label>
+        <input id="new-name" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="breed">Pet breed</label>
+        <input id="new-breed" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="age">Pet age</label>
+        <input id="new-age" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="color">Pet color</label>
+        <input id="new-color" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="sex">Pet sex</label>
+        <input id="new-sex" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="personality">Pet personality</label>
+        <input id="new-personality" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="picture">Picture</label>
+        <input id="new-picture" class="form-control" type="file" accept="image/*">
+      </div>
+      <button type="submit" id="add-pet">Add pet</button>'
+    </form>
   </div>
 </body>
 </html>

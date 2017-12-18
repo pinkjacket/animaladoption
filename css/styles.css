@@ -17,4 +17,9 @@ img {
 
 .border {
   border: 4px solid gold;
+  background-color: black;
+}
+
+#new-pet-form {
+  display: none;
 }
