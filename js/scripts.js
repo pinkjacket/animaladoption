@@ -1,5 +1,6 @@
 /*BACK END LOGIC*/
 var petList = [];
+var selectPet;
 
 function Pet(name, breed, age, color, sex, personality, picture) {
   this.name = name;
@@ -35,7 +36,7 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
   }
 
   $(".pets").click(function() {
-    var selectPet = this.id;
+    selectPet = this.id;
     $("#picture").empty();
     $("#name").text(petList[selectPet - 1].name);
     $("#breed").text(petList[selectPet - 1].breed);
@@ -49,9 +50,7 @@ var fish = new Pet ("Zero", ["Fish", "Betta"], "1 year", ["blue", "red"], "male"
   // Adoption status toggle.
   //ONLY FUNCTIONAL FOR SINGLE ANIMAL, NEEDS TO BE APPLICABLE TO ANY ANIMAL 'CLICKED' ON.
   $("#edit-adoption-status").last().click(function() {
-    console.log(this.id);
-    dog.adoptionUpdate();
-    console.log("Adoption status update: " + dog.adoptionStatus);
+    petList[selectPet - 1].adoptionUpdate();
+    $("#adoptionStatus").text(petList[selectPet - 1].adoptionStatus);
   }); // End of the 'adoption status' toggle.
-
 }); // End of the document 'ready' listener.
